@@ -33,18 +33,18 @@ python -m http.server 8000
 将官网文件直接同步到官网静态目录：
 
 ```bash
-rsync -av index.html 404.html privacy.html robots.txt sitemap.xml assets/ /srv/yeahboot/site/
+rsync -av --delete index.html 404.html privacy.html robots.txt sitemap.xml assets/ /var/www/yeahboot/site/
 ```
 
 文档由 `yeah-boot-docs` 仓库使用 VitePress 构建后独立发布到 `docs.yeahboot.com`。
 
-- `nginx/yeahboot.conf.example`
+- `nginx/yeahboot.com.conf`
 - `https://docs.yeahboot.com/deployment/nginx`
 
 ## 发布前检查
 
 - 替换官网中的演示地址和仓库地址（如有变化）。
 - 替换产品预览图。
-- 根据实际备案情况填写页脚备案号。
+- 确认页脚 ICP 备案号与当前备案信息一致；公安备案审核完成后补充对应信息。
 - 确认 `sitemap.xml` 中的地址正确。
 - 不要将服务器配置、账号、密码、Token 或密钥提交到本仓库。
