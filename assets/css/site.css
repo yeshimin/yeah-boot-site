@@ -910,6 +910,17 @@ svg {
 .footer-bottom-with-filing > .filing-link {
   grid-column: 2;
 }
+.footer-copyright {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.company-link {
+  color: inherit;
+}
+.company-link:hover {
+  color: var(--primary);
+}
 .footer-meta {
   display: flex;
   gap: 16px;
