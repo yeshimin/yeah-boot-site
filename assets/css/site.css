@@ -832,12 +832,28 @@ svg {
 }
 
 .company-link,
-.filing-link {
+.filing-link,
+.police-filing {
   color: inherit;
 }
 
-.filing-link {
+.footer-filings {
   grid-column: 2;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  white-space: nowrap;
+}
+
+.police-filing {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.police-filing img {
+  width: auto;
+  height: 16px;
 }
 
 .footer-meta {
@@ -1123,6 +1139,11 @@ svg {
     align-items: flex-start;
     flex-direction: column;
     gap: 4px;
+  }
+
+  .footer-filings {
+    flex-wrap: wrap;
+    gap: 8px 16px;
   }
 
   .footer-meta {
